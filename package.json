@@ -85,6 +85,7 @@
     "test": "hardhat test",
     "report:gas": "REPORT_GAS=true hardhat test",
     "deploy-local": "hardhat deploy --network localhost",
+    "deploy-goerli": "hardhat deploy --network goerli",
     "node": "hardhat node"
   }
 }

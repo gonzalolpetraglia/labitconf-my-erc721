@@ -35,11 +35,10 @@ const chainIds = {
 };
 
 // Ensure that we have all the environment variables we need.
-const mnemonic = "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon";
-const infuraApiKey = "CHANGETHIS";
+const mnemonic = "CHANGETHIS";
+const url = "CHANGETHIS";
 
 const createTestnetConfig = (network: keyof typeof chainIds): NetworkUserConfig => {
-  const url: string = "https://" + network + ".infura.io/v3/" + infuraApiKey;
   return {
     accounts: {
       count: 10,
@@ -66,9 +65,6 @@ const config: HardhatUserConfig = {
       chainId: chainIds.hardhat,
     },
     goerli: createTestnetConfig("goerli"),
-    kovan: createTestnetConfig("kovan"),
-    rinkeby: createTestnetConfig("rinkeby"),
-    ropsten: createTestnetConfig("ropsten"),
   },
   paths: {
     artifacts: "./artifacts",
